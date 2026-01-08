@@ -11,6 +11,12 @@ metadata:
 
 This skill provides a structured workflow for translating Figma designs into production-ready code with pixel-perfect accuracy. It ensures consistent integration with the Figma MCP server, proper use of design tokens, and 1:1 visual parity with designs.
 
+**Related documentation:**
+- [agents.md](../../agents.md) - Full tool reference and agent capabilities
+- [rule.md](../../rule.md) - Project-level integration rules
+- [code-connect-components](../code-connect-components/skill.md) - Connect Figma components to code
+- [create-design-system-rules](../create-design-system-rules/skill.md) - Create project-specific rules
+
 ## Prerequisites
 
 - Figma MCP server must be connected and accessible

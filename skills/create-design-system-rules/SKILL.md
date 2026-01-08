@@ -11,6 +11,12 @@ metadata:
 
 This skill helps you generate custom design system rules tailored to your project's specific needs. These rules guide Claude to produce consistent, high-quality code when implementing Figma designs, ensuring that your team's conventions, component patterns, and architectural decisions are followed automatically.
 
+**Related documentation:**
+- [agents.md](../../agents.md) - Full tool reference and agent capabilities
+- [rule.md](../../rule.md) - Example of project-level integration rules
+- [implement-design](../implement-design/skill.md) - Implement Figma designs as code
+- [code-connect-components](../code-connect-components/skill.md) - Connect Figma components to code
+
 ## What Are Design System Rules?
 
 Design system rules are project-level instructions that encode the "unwritten knowledge" of your codebase - the kind of expertise that experienced developers know and would pass on to new team members:

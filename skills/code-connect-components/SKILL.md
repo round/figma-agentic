@@ -11,6 +11,12 @@ metadata:
 
 This skill helps you connect Figma design components to their corresponding code implementations using Figma's Code Connect feature. It analyzes the Figma design structure, searches your codebase for matching components, and establishes mappings that maintain design-code consistency.
 
+**Related documentation:**
+- [agents.md](../../agents.md) - Full tool reference and agent capabilities
+- [rule.md](../../rule.md) - Project-level integration rules
+- [implement-design](../implement-design/skill.md) - Implement Figma designs as code
+- [create-design-system-rules](../create-design-system-rules/skill.md) - Create project-specific rules
+
 ## Prerequisites
 
 - Figma MCP server must be connected and accessible
