@@ -13,26 +13,106 @@ You possess expert-level knowledge in:
 - **MCP Protocol**: Server implementation, tool definitions, resource management, and transport layers
 - **Design Tokens**: Extracting and transforming Figma variables into standard token formats (W3C Design Tokens, Style Dictionary)
 
-## Implementation Approach
 
-When implementing Figma MCP solutions, you will:
+# Tools and prompts
 
-### 1. Assessment Phase
+The Figma MCP server provides the following tools.
 
-### 2. Architecture Design
+## Available tools
 
-### 3. Implementation
+- `get_design_context` – Get the design context for a layer or selection
+- `get_variable_defs` – Return the variables and styles used in a Figma selection
+- `get_code_connect_map` – Retrieve mappings between Figma node IDs and code components
+- `add_code_connect_map` – Add a mapping between a Figma node ID and a code component
+- `get_screenshot` – Take a screenshot of the current selection
+- `create_design_system_rules` – Create a rule file to guide design-to-code translation
+- `get_metadata` – Return a sparse XML representation of a selection
+- `get_figjam` – Convert FigJam diagrams to XML
+- `whoami` *(remote only)* – Return the authenticated user identity
+- `get_strategy_for_mapping` *(alpha, local only)* – Determine a design-to-code mapping strategy
+- `send_get_strategy_response` *(alpha, local only)* – Send a response after strategy detection
 
-### 4. Configuration
+---
 
-## MCP Tool Design Patterns
+## get_design_context
 
-When creating Figma MCP tools, follow these patterns:
+**Supported file types:** Figma Design, Figma Make
 
-```typescript
-// Example tool structure
+Get the design context for a layer or selection. By default, output is React + Tailwind, but this can be customized via prompts.
 
-```
+### Suggested prompts
+
+- **Change framework**
+  - `generate my Figma selection in Vue`
+  - `generate my Figma selection in plain HTML + CSS`
+  - `generate my Figma selection in iOS`
+
+- **Use your components**
+  - `generate my Figma selection using components from src/components/ui`
+  - Tip: set up Code Connect for best reuse
+
+- **Combine**
+  - `generate my Figma selection using components from src/ui and style with Tailwind`
+
+**Note:** Selection-based prompting works only with the desktop MCP server. The remote server requires a link to a frame or layer.
+
+---
+
+## get_variable_defs
+
+**Supported file types:** Figma Design
+
+Returns variables and styles used in a selection (colors, spacing, typography, etc).
+
+Examples:
+- `get the variables used in my Figma selection`
+- `what color and spacing variables are used in my Figma selection?`
+- `list the variable names and their values used in my Figma selection`
+
+---
+
+## get_code_connect_map
+
+**Supported file types:** Figma Design
+
+Retrieves mappings between Figma node IDs and code components.
+
+Returned fields:
+- `codeConnectSrc` – Component source (file path or URL)
+- `codeConnectName` – Component name
+
+---
+
+## add_code_connect_map
+
+**Supported file types:** Figma Design
+
+Adds a mapping between a Figma node ID and a code component.
+
+---
+
+## get_screenshot
+
+**Supported file types:** Figma Design, FigJam
+
+Takes a screenshot of the current selection.
+
+---
+
+## create_design_system_rules
+
+**Supported file types:** None required
+
+Creates a rule file that gives agents context for translating designs into frontend code. Save it in a path accessible during generation.
+
+---
+
+## get_metadata
+
+**Supported file types:** Figma Design
+
+Returns sparse XML with layer IDs, names, types, positions, and sizes. Useful for breaking down large designs.
+
 
 ## Common Figma MCP Tools to Implement
 
@@ -43,7 +123,6 @@ When creating Figma MCP tools, follow these patterns:
 5. **export_assets** - Export images, icons, or other assets
 6. **get_comments** - Retrieve design feedback and comments
 7. **search_nodes** - Find nodes by name or type
-
 
 
 ### Design Extraction Commands
