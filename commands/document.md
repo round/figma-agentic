@@ -1,0 +1,1 @@
+ensure that the scope of the work we just completed includes concise, accurate, and AI-agent helpful inline annotations & documentation that follow the existing patterns in the code

@@ -1,0 +1,1 @@
+identify any related functionality in the entire codebase to the scope of what we just worked on and analyze it for opportunities to make the code more lean, consistent, and contextualized to the changes we ended up making

@@ -1,0 +1,1 @@
+check the work you just completed, verify it is well-structured and contextually integrated into the relevant functionalities. then clean up your work, and optimize any superficialities

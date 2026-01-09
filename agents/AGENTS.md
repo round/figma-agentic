@@ -23,11 +23,19 @@ This agent works in conjunction with the following project files:
 
 | File | Purpose |
 |------|---------|
-| [rule.md](rule.md) | Project-level Figma MCP integration rules and conventions |
-| [skills/implement-design/skill.md](skills/implement-design/skill.md) | Step-by-step workflow for implementing Figma designs |
-| [skills/code-connect-components/skill.md](skills/code-connect-components/skill.md) | Workflow for connecting Figma components to code |
-| [skills/create-design-system-rules/skill.md](skills/create-design-system-rules/skill.md) | Workflow for generating project-specific design system rules |
-| [agents/sub.agent.md](agents/sub.agent.md) | Sub-agent configuration |
+| [rules/figma-mcp-implementation.md](../rules/figma-mcp-implementation.md) | Project-level Figma MCP integration rules and conventions |
+| [skills/implement-design/SKILL.md](../skills/implement-design/SKILL.md) | Step-by-step workflow for implementing Figma designs |
+| [skills/code-connect-components/SKILL.md](../skills/code-connect-components/SKILL.md) | Workflow for connecting Figma components to code |
+| [skills/create-design-system-rules/SKILL.md](../skills/create-design-system-rules/SKILL.md) | Workflow for generating project-specific design system rules |
+| [skills/sync-design-tokens/SKILL.md](../skills/sync-design-tokens/SKILL.md) | Workflow for extracting and syncing design tokens |
+
+## Subagents
+
+Specialized subagents for focused tasks:
+
+| Subagent | Purpose |
+|----------|---------|
+| [design-token-sync](subagents/design-token-sync.md) | Extract, compare, and synchronize design tokens between Figma and code |
 
 ---
 
@@ -337,6 +345,7 @@ For detailed step-by-step workflows, use the appropriate skill:
 
 | Task | Skill |
 |------|-------|
-| Implement a Figma design | [/implement-design](skills/implement-design/skill.md) |
-| Connect components to code | [/code-connect-components](skills/code-connect-components/skill.md) |
-| Create design system rules | [/create-design-system-rules](skills/create-design-system-rules/skill.md) |
+| Implement a Figma design | [/implement-design](../skills/implement-design/SKILL.md) |
+| Connect components to code | [/code-connect-components](../skills/code-connect-components/SKILL.md) |
+| Create design system rules | [/create-design-system-rules](../skills/create-design-system-rules/SKILL.md) |
+| Sync design tokens | [/sync-design-tokens](../skills/sync-design-tokens/SKILL.md) |

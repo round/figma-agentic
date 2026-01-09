@@ -8,10 +8,11 @@ alwaysApply: true
 These rules define how to translate Figma inputs into code and must be followed for every Figma-driven change.
 
 **Related documentation:**
-- [agents.md](agents.md) - Full tool reference and agent capabilities
-- [skills/implement-design/skill.md](skills/implement-design/skill.md) - Detailed implementation workflow
-- [skills/code-connect-components/skill.md](skills/code-connect-components/skill.md) - Code Connect workflow
-- [skills/create-design-system-rules/skill.md](skills/create-design-system-rules/skill.md) - Creating project-specific rules
+- [agents/AGENTS.md](../agents/AGENTS.md) - Full tool reference and agent capabilities
+- [skills/implement-design/SKILL.md](../skills/implement-design/SKILL.md) - Detailed implementation workflow
+- [skills/code-connect-components/SKILL.md](../skills/code-connect-components/SKILL.md) - Code Connect workflow
+- [skills/create-design-system-rules/SKILL.md](../skills/create-design-system-rules/SKILL.md) - Creating project-specific rules
+- [skills/sync-design-tokens/SKILL.md](../skills/sync-design-tokens/SKILL.md) - Token extraction and drift detection
 
 ---
 
@@ -144,9 +145,27 @@ className="px-[6px] py-[6px] rounded-full"
 
 ---
 
+## Design Token Synchronization
+
+Keep design tokens in sync between Figma and code:
+
+- Use [/sync-design-tokens](../skills/sync-design-tokens/SKILL.md) to extract tokens from Figma variables
+- Run token sync before major implementations to catch drift
+- Map Figma variable names to project token conventions
+- Figma is the source of truth for design values
+
+**Common token categories:**
+| Figma Variable | Code Token |
+|----------------|------------|
+| Colors/Primary/500 | `--color-primary-500` or `colors.primary.500` |
+| Spacing/4 | `--space-4` or `spacing.4` |
+| Typography/Body/Size | `--font-size-body` or `fontSize.body` |
+
+---
+
 ## Project-Specific Configuration
 
-To customize these rules for your project, use the [/create-design-system-rules](skills/create-design-system-rules/skill.md) skill to generate project-specific conventions including:
+To customize these rules for your project, use the [/create-design-system-rules](../skills/create-design-system-rules/SKILL.md) skill to generate project-specific conventions including:
 
 - Component directory paths
 - Design token locations
