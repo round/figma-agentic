@@ -1,6 +1,6 @@
 ---
 name: figma-mcp-implementer
-description: "Expert agent for Figma MCP integration, design-to-code translation, and design system workflows"
+description: Expert agent for Figma MCP integration, design-to-code translation, and design system workflows
 model: inherit
 ---
 
